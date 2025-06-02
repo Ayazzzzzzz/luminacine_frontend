@@ -3,13 +3,20 @@ service: default
 instance_class: F1
 
 handlers:
-  - url: /
+  # Serve static assets (JS, CSS, images, etc.)
+  - url: /assets/(.*)
+    static_files: dist/assets/\1
+    upload: dist/assets/(.*)
+    secure: always
+
+  # Serve other static files (favicon, etc.)
+  - url: /(.*\.(js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot|map))$
+    static_files: dist/\1
+    upload: dist/.*\.(js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot|map)$
+    secure: always
+
+  # Serve index.html for ALL routes (SPA routing)
+  - url: /.*
     static_files: dist/index.html
     upload: dist/index.html
-
-  - url: /(.*)
-    static_files: dist/\1
-    upload: dist/(.*)
-
-  - url: /.*
-    script: auto
+    secure: always
