@@ -95,10 +95,12 @@ export default function HistoryPage() {
   return (
     <div className="min-h-screen w-full bg-black text-white">
     <div className="max-w-6xl mx-auto px-4 py-8">
-      <a href="/home" className="text-white-400 block mb-6">
+      <div className="flex items-center gap-4 mb-10">
+        <a href="/home" className="text-white-400 block mb-6">
         <ArrowLeft size={40} />
-      </a>
-      <h1 className="text-3xl font-bold text-center mb-6">🎟️ My Booking History</h1>
+        </a>
+        <h1 className="text-3xl font-bold text-center mb-6">🎟️ My Booking History</h1>
+      </div>
 
       {bookings.length === 0 ? (
         <p className="text-center text-gray-400">You have no bookings yet.</p>
