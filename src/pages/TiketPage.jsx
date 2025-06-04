@@ -83,10 +83,12 @@ export default function TicketPage() {
 
   return (
     <div className="min-h-screen bg-black text-white p-6">
-      <a href="/home" className="text-yellow-400">
-        <ArrowLeft size={40} />
-      </a>
-      <h1 className="text-4xl font-bold mb-6"> Your Ticket</h1>
+      <div className="flex items-center gap-4 mb-10">
+        <a href="/home" className="text-yellow-400">
+          <ArrowLeft size={40} />
+        </a>
+        <h1 className="text-4xl font-bold mb-6"> Your Ticket</h1>
+      </div>
 
       <div className="flex flex-col lg:flex-row gap-8">
         <div className="bg-white text-black rounded-2xl p-4 w-full lg:w-2/3 shadow-xl">
