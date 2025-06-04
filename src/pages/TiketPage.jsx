@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import { ArrowLeft } from 'lucide-react';
 import axios from 'axios';
 import barcodeImage from '../assets/barcodeboongan.png';
 import useAuth from '../auth/useAuth';
@@ -82,8 +83,9 @@ export default function TicketPage() {
 
   return (
     <div className="min-h-screen bg-black text-white p-6">
-
-
+      <a href="/home" className="text-yellow-400">
+        <ArrowLeft size={40} />
+      </a>
       <h1 className="text-4xl font-bold mb-6"> Your Ticket</h1>
 
       <div className="flex flex-col lg:flex-row gap-8">
