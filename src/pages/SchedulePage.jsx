@@ -1,6 +1,7 @@
 // src/pages/SchedulePage.jsx
 import { useEffect, useState } from 'react'
 import axios from 'axios'
+import { ArrowLeft } from "lucide-react";
 import { useNavigate } from 'react-router-dom'
 import useAuth from '../auth/useAuth'
 
@@ -37,7 +38,9 @@ export default function SchedulePage() {
 
   return (
     <div className="min-h-screen bg-neutral-900 text-white px-6 py-10">
-      
+      <a href="/admindashboard" className="text-yellow-400">
+        <ArrowLeft size={40} />
+      </a>
       <h1 className="text-5xl font-bold text-yellow-400 mb-10">SCHEDULE</h1>
 
       {loading ? (
