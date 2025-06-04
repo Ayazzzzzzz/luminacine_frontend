@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
+import { ArrowLeft } from "lucide-react";
 import axios from 'axios'
 import useAuth from '../auth/useAuth'
 
@@ -102,6 +103,9 @@ export default function SchedulePage() {
   return (
     <div className="min-h-screen bg-neutral-900 text-white px-6 py-10">
       <div className="flex justify-between items-center mb-6">
+        <a href="/schedule" className="text-yellow-400">
+          <ArrowLeft size={40} />
+        </a>
         <h1 className="text-4xl font-bold text-yellow-400">Schedule - {movie?.title}</h1>
         <button
           onClick={() => {
